@@ -18,6 +18,7 @@
 
 *** Note: Bot works in a chrome application started in incognito with connected Heystack extension. Authentication should be completed manually. 
 
+### Facebook Ad Library
 1. Run `python bot.py`
 2. Once chrome window opened change `Ad category` to `All ads`, enter category, press Enter.
 3. Press button "LOGIN TO HEYSTACK"
