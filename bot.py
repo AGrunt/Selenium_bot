@@ -23,11 +23,12 @@ services = {
 
 chrome_options = Options()
 chrome_options.add_argument("--incognito")
-#chrome_options.add_argument("--window-size=1000,800")
+chrome_options.add_argument("--window-size=1000,800")
 chrome_options.add_argument("--start-maximized")
 chrome_options.add_extension('./assets/IJKBMHMJNBODJFGHDBDHPNOLCDANFBFN_1_1_0_0.crx')
 chrome_options.add_experimental_option("detach", True)
-driver = webdriver.Chrome(options=chrome_options)
+#driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome()
                                 
 driver.get("chrome://extensions/?id=ijkbmhmjnbodjfghdbdhpnolcdanfbfn")
 driver.execute_script("return document.querySelector('extensions-manager').shadowRoot.querySelector('#viewManager > extensions-detail-view.active').shadowRoot.querySelector('div#container.page-container > div.page-content > div#options-section extensions-toggle-row#allow-incognito').shadowRoot.querySelector('label#label input').click()");
