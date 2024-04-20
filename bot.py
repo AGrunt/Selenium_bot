@@ -6,16 +6,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-#print("Pick a service to scratch")
-#print(f"1: Facebook Ad Library")
-#print(f"2: TikTok Ad Library")
-#user_choice = input('Choice wisely: ')
-
-#if user_choice not in ['1', '2']:
-#    user_choice = input('Choice must be 1 or 2: ')
-#else:
-#    user_choice = int(user_choice) - 1
-
 services = {
     'service_Name': ['Facebook Ad Lybrary', 'TikTok Ads Library'],
     'service_URL': ['https://www.facebook.com/ads/library/', 'https://ads.tiktok.com/business/creativecenter/inspiration/topads/pc/en?period=30&region=AU']
@@ -28,7 +18,6 @@ chrome_options.add_argument("--start-maximized")
 chrome_options.add_extension('./assets/IJKBMHMJNBODJFGHDBDHPNOLCDANFBFN_1_1_0_0.crx')
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
-#driver = webdriver.Chrome()
                                 
 driver.get("chrome://extensions/?id=ijkbmhmjnbodjfghdbdhpnolcdanfbfn")
 driver.execute_script("return document.querySelector('extensions-manager').shadowRoot.querySelector('#viewManager > extensions-detail-view.active').shadowRoot.querySelector('div#container.page-container > div.page-content > div#options-section extensions-toggle-row#allow-incognito').shadowRoot.querySelector('label#label input').click()");
@@ -63,8 +52,8 @@ def click_them_all(user_choice):
             break
         last_height = new_height        
     return
-#==================================================================
 
+# Run everything
 open_service(services['service_Name'][0],services['service_URL'][0])
 click_them_all(0)
 
