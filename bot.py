@@ -39,14 +39,6 @@ def open_service(service, url):
     print(f"Service: {service}")
     return
 
-#statistics if we reach end of the internet and were not droped by facebook or tiktok.
-def stats(service, total_ads, total_pages, elapsewd_time):
-    print(f'{service} scratching statistics:')
-    print(f'Total ads count: {total_ads}')
-    print(f'Total pages count: {total_pages}')
-    print(f'Elapsed time: {elapsewd_time}')
-    return
-
 #clicker
 def click_them_all(user_choice):
     # Get scroll height
